@@ -1,8 +1,7 @@
 class CashRegister:
 
-    def __init__(self, items):
+    def __init__(self):
 
-        self.items = {item: False for item in items}
         self.total_items = {}
         self.total_price = 0
         self.discount = 0
@@ -16,20 +15,22 @@ class CashRegister:
     def apply_discount(self, monetary_amount):
         self.discount += monetary_amount
 
-    def get_total(self, item):
-        Total_before_discount = sum(self.total_items.values())
-        Total = total_before_discount - self.discount
+    def get_total(self):
+        total_before_discount = sum(self.total_items.values())
+        total = total_before_discount - self.discount
+        return total
 
     def show_items(self):
-        For item, price in self.total_items.items():
-        Print (f”{total} £{price}”)
+        for item, price in self.total_items.items():
+            print(f"{item} £{price}")
 
-    def reset_register(self, item):
+    def reset_register(self):
         self.total_items = {}
         self.total_price = 0
         self.discount = 0
 
 
+register_1 = CashRegister()
 
 #Add
 register_1.add_item({"Coffee": 2.00})
