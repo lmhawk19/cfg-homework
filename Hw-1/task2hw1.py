@@ -10,8 +10,9 @@ class Student:
 
 class CFGStudent(Student):
 
-  def __init__(self, name, age, id)
+  def __init__(self, name, age, id, specialisation)
         super().__init__(name, age, id)
+        self.specialisation = specialisation
 
   def add_subject(self, subject_and_grade):
     self.subjects.update(subject_and_grade)
@@ -32,9 +33,9 @@ class StudentSearch:
 
 
 #Students
-first_student = CFGStudent("Lucy", 25, 1)
-second_student = CFGStudent("Luke", 22, 2)
-third_student = CFGStudent("Holly", 28, 3)
+first_student = CFGStudent("Lucy", 25, 1, "Software")
+second_student = Student("Luke", 22, 2)
+third_student = Student("Holly", 28, 3)
 
 #Add subject and grade
 first_student.add_subject({"APIs": 70})
