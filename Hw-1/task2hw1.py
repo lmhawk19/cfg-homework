@@ -10,7 +10,7 @@ class Student:
 
 class CFGStudent(Student):
 
-  def __init__(self, name, age, id, specialisation)
+  def __init__(self, name, age, id, specialisation):
         super().__init__(name, age, id)
         self.specialisation = specialisation
 
@@ -20,16 +20,12 @@ class CFGStudent(Student):
   def remove_subject(self, subject):
         self.subjects.pop(subject)
 
-  def get_overall_mark(self, item):
-        return sum(self.subjects.values())/len
+  def get_overall_mark(self):
+        return sum(self.subjects.values())/len(self.subjects.values())
 
   def view_all_subjects(self):
     for subject, grade in self.subjects.items():
-            print (f"{self.name} grade for {subject} {grade}")
-
-class StudentSearch:
-    def search_subjects_by_name(self, name):
-        self.name.get(self.subject)
+            print(f"{self.name} grade for {subject} {grade}")
 
 
 #Students
