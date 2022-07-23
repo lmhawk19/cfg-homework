@@ -1,43 +1,40 @@
 
-
 class Student:
 
     def __init__(self, name, age, id):
+
         self.name = name
         self.age = age
         self.id = id
-        self.subjects = dict{}
-	  self.total_subjects = 0
-	  self.total_grades = 0
+        self.subjects = dict()
 
 class CFGStudent(Student):
 
-  def __init__(self, name, age, id):
-        super().__init__(name, age, id, “Software”)
+  def __init__(self, name, age, id)
+        super().__init__(name, age, id)
 
   def add_subject(self, subject_and_grade):
-        self.subjects.update(subject_and_grade)
+    self.subjects.update(subject_and_grade)
 
   def remove_subject(self, subject):
         self.subjects.pop(subject)
 
   def get_overall_mark(self, item):
-        get_overall_mark = avg(self.total_grades.values())
+        return sum(self.subjects.values())/len
 
   def view_all_subjects(self):
-For subject, grade in self.total_subjects.subjects():
-Print (f”{name} takes classes in {subject}”)
+    for subject, grade in self.subjects.items():
+            print (f"{self.name} grade for {subject} {grade}")
 
 class StudentSearch:
     def search_subjects_by_name(self, name):
-        self.name.get(subject)
-
+        self.name.get(self.subject)
 
 
 #Students
-first_student = Student(“Lucy”, 25, 1)
-second_student = Student(“Luke”, 22, 2)
-third_student = Student(“Holly”, 28, 3)
+first_student = CFGStudent("Lucy", 25, 1)
+second_student = CFGStudent("Luke", 22, 2)
+third_student = CFGStudent("Holly", 28, 3)
 
 #Add subject and grade
 first_student.add_subject({"APIs": 70})
